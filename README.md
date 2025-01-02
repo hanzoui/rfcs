@@ -1,5 +1,5 @@
 # rfcs
-RFCs for substantial changes to ComfyUI core.
+RFCs for substantial changes to ComfyUI core, APIs, and standards.
 
 ## What is an RFC?
 
@@ -29,10 +29,13 @@ changes to standards / APIs in the ComfyUI ecosystem.
 
 What constitutes a "substantial" change is evolving based on community norms, but may include the following:
 
-- A new or change to existing ComfyUI core libraries or backend APIs eg. [Model Patcher](https://github.com/comfyanonymous/ComfyUI/commit/0ee322ec5f338791c5836b79830e2f419d6fcc79),
+- A new or change to existing ComfyUI core libraries or backend APIs eg. [Model Patcher](https://github.com/comfyanonymous/ComfyUI/commit/0ee322ec5f338791c5836b79830e2f419d6fcc79). If you are writing a custom node and want something expoosed by core in an API, please open an issue. 
 - A major change to ComfyUI functionality, such as the execution engine eg. [Execution Model Inversion](https://github.com/comfyanonymous/ComfyUI/commit/5cfe38f41c7091b0fd954877d9d7427a8b438b1a)
-- Changes to Workflow JSON
+- Changes to workflow.json schema
 - Changes to custom node standards
+- Request for frontend widgets and APIs
+- Nodes that should be provided by core
+- Anything that will be relied on by developers using ComfyUI (eg. `/prompt` API)
 
 If you submit a pull request to implement a new feature without going
 through the RFC process, it may be closed with a polite request to
@@ -51,6 +54,8 @@ level of API design detail required for an RFC. **You may open an
 issue on this repo to start a high-level discussion**, with the goal of
 eventually formulating an RFC pull request with the specific implementation
 design.
+
+Our [Discord](https://discord.com/invite/comfyorg) is also a good place to start a discussion.
 
 ## What the process is
 
