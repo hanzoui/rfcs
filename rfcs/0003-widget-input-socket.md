@@ -4,16 +4,16 @@
 - Target Major Version: Frontend v1.16
 - Implementation PRs:
   
-  - https://github.com/Comfy-Org/ComfyUI_frontend/pull/3326
-  - https://github.com/Comfy-Org/litegraph.js/pull/891
+  - https://github.com/hanzoui/studio_frontend/pull/3326
+  - https://github.com/hanzoui/litegraph.js/pull/891
 
 - Reference Issues:
 
-  - <https://github.com/Comfy-Org/ComfyUI_frontend/pull/1021>
+  - <https://github.com/hanzoui/studio_frontend/pull/1021>
 
 ## Summary
 
-This RFC proposes replacing ComfyUI's current widget-to-socket conversion system with a simpler, more intuitive "widget input socket" design. Instead of requiring users to manually convert widgets to sockets through context menus, widgets will automatically display an input socket when hovered over. This socket behaves like any other input socket - allowing users to drag connections to and from it. When connected, the widget becomes disabled (grayed out) to indicate it's receiving an external input.
+This RFC proposes replacing Hanzo Studio's current widget-to-socket conversion system with a simpler, more intuitive "widget input socket" design. Instead of requiring users to manually convert widgets to sockets through context menus, widgets will automatically display an input socket when hovered over. This socket behaves like any other input socket - allowing users to drag connections to and from it. When connected, the widget becomes disabled (grayed out) to indicate it's receiving an external input.
 
 This change aims to:
 
@@ -23,7 +23,7 @@ This change aims to:
 - Reduce the number of clicks needed to make connections
 - Eliminate the need to maintain conversion states in workflow files
 
-The proposal represents a breaking change that would be implemented in [workflow schema v2.0](https://github.com/Comfy-Org/rfcs/pull/2), though existing workflows would continue to function without modification.
+The proposal represents a breaking change that would be implemented in [workflow schema v2.0](https://github.com/hanzoui/rfcs/pull/2), though existing workflows would continue to function without modification.
 
 ## Basic example
 
@@ -45,7 +45,7 @@ There are two ways to convert a socket to a widget:
 
 ![conversion_context_menu](https://github.com/user-attachments/assets/4e47f740-d607-44da-b49c-4a9bea548656)
 
-2\. **Option2**: Drag a link of correct type from an output socket on another node to the widget (Implemented in <https://github.com/Comfy-Org/ComfyUI_frontend/pull/1021>).
+2\. **Option2**: Drag a link of correct type from an output socket on another node to the widget (Implemented in <https://github.com/hanzoui/studio_frontend/pull/1021>).
 
 https://github.com/user-attachments/assets/360013b2-d350-4fb0-bbce-cb860178d9ed
 
@@ -88,7 +88,7 @@ When connected, the widget will be disabled (grayed out) and the socket will be 
   - Matches behavior in popular node-based tools like Blender
   - Reduces learning curve for users coming from other platforms
   - Leverages existing mental models from the visual programming community
-  - Makes ComfyUI feel more familiar to experienced node-based workflow users
+  - Makes Hanzo Studio feel more familiar to experienced node-based workflow users
 
 4. **Cognitive Simplification**
 
@@ -118,7 +118,7 @@ When connected, the widget will be disabled (grayed out) and the socket will be 
   - Reduces potential edge cases in the connection system
   - Easier to maintain and extend in the future
 
-The primary goal is to make ComfyUI more intuitive and efficient to use while reducing implementation complexity. This change would bring the interface more in line with user expectations and industry standards, while simultaneously simplifying the codebase.
+The primary goal is to make Hanzo Studio more intuitive and efficient to use while reducing implementation complexity. This change would bring the interface more in line with user expectations and industry standards, while simultaneously simplifying the codebase.
 
 ## Detailed design
 
@@ -176,7 +176,7 @@ The primary goal is to make ComfyUI more intuitive and efficient to use while re
 
   - Maintain compatibility with existing serialization format
 
-    - Reference: [RFC #2](https://github.com/Comfy-Org/rfcs/pull/2)
+    - Reference: [RFC #2](https://github.com/hanzoui/rfcs/pull/2)
 
   - No changes required to current workflow file structure
 

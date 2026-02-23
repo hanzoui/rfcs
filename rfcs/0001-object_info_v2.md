@@ -1,11 +1,11 @@
-# RFC: ComfyUI API Improvements
+# RFC: Hanzo Studio API Improvements
 
 - Start Date: 2025-02-03
 - Target Major Version: TBD
 
 ## Summary
 
-This RFC proposes three key improvements to the ComfyUI API:
+This RFC proposes three key improvements to the Hanzo Studio API:
 
 1. Lazy loading for COMBO input options to reduce initial payload size
 2. Restructuring node output specifications for better maintainability

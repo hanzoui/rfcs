@@ -38,9 +38,9 @@ Why should we *not* do this? Please consider:
 
 - implementation cost, both in term of code size and complexity
 - whether the proposed feature can be implemented in user space
-- the impact on teaching people ComfyUI
+- the impact on teaching people Hanzo Studio
 - integration of this feature with other existing and planned features
-- cost of migrating existing ComfyUI applications (is it a breaking change?)
+- cost of migrating existing Hanzo Studio applications (is it a breaking change?)
 
 There are tradeoffs to choosing any path. Attempt to identify them here.
 
@@ -50,8 +50,8 @@ What other designs have been considered? What is the impact of not doing this?
 
 ## Adoption strategy
 
-If we implement this proposal, how will existing ComfyUI users and developers adopt it? Is
-this a breaking change? How will this affect other projects in the ComfyUI ecosystem?
+If we implement this proposal, how will existing Hanzo Studio users and developers adopt it? Is
+this a breaking change? How will this affect other projects in the Hanzo Studio ecosystem?
 
 ## Unresolved questions
 

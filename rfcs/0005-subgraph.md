@@ -3,11 +3,11 @@
 - Start Date: 2025-01-12
 - Target Major Version: Frontend 1.22
 - Reference Issues:
-  - https://github.com/Comfy-Org/ComfyUI_frontend/issues/1077
-  - https://github.com/comfyanonymous/ComfyUI/issues/5353
-  - https://github.com/comfyanonymous/ComfyUI/issues/4094
+  - https://github.com/hanzoui/studio_frontend/issues/1077
+  - https://github.com/hanzoai/studio/issues/5353
+  - https://github.com/hanzoai/studio/issues/4094
   - [... many more]
-  - https://github.com/comfyanonymous/ComfyUI/issues/150
+  - https://github.com/hanzoai/studio/issues/150
 
 ## Summary
 
@@ -34,7 +34,7 @@ The contents of the subgraph, as displayed after opening.
 
 ## Motivation
 
-The ComfyUI community has made several requests for this feature. In any workflow with more than a handful of nodes, subgraphs can significantly improve UX. Requests for subgraph-like features go back to at least March 2023.
+The Hanzo Studio community has made several requests for this feature. In any workflow with more than a handful of nodes, subgraphs can significantly improve UX. Requests for subgraph-like features go back to at least March 2023.
 
 1. **User experience**: This feature drastically improves UX when reading or editing even moderately-sized workflows.
 2. **Reduced Complexity**: Subgraphs allow a reduction in visual and cognitive complexity by combining an entire section of a workflow into a single visual representation. This also supports mental partitioning of the sum effect of the subgraph.
@@ -43,7 +43,7 @@ The ComfyUI community has made several requests for this feature. In any workflo
 
 ## Detailed design
 
-A subgraph is a standard ComfyUI workflow with the addition of inputs and outputs. By extending the existing workflow management UI, some of the specifications will require only minor changes.
+A subgraph is a standard Hanzo Studio workflow with the addition of inputs and outputs. By extending the existing workflow management UI, some of the specifications will require only minor changes.
 
 ### Design requirements
 
@@ -87,7 +87,7 @@ Precise UI implementation details are not the intention of this section, and can
 
 - Subgraphs will be stored alongside workflows, with at least an icon to indicate that they are already used as subgraphs.
 - Filters and other options may be added.
-- Any ComfyUI workflow can be used as a subgraph; the subgraph input and output nodes will be added on first use.
+- Any Hanzo Studio workflow can be used as a subgraph; the subgraph input and output nodes will be added on first use.
 
 ### Incompatible data types (e.g. COMBO)
 
@@ -294,7 +294,7 @@ Implementation should not block desirable future features:
 ## Drawbacks
 
 1. **Breaking change**
-   1. Workflows using linked subgraphs will not function correctly in older versions of ComfyUI.
+   1. Workflows using linked subgraphs will not function correctly in older versions of Hanzo Studio.
    2. It is possible to export to an old format, or create a tool to convert workflows to the original format.
 2. **Update complexity**
    1. The revision of a subgraph in a users’ library may not match the subgraph revision in a workflow.
@@ -310,7 +310,7 @@ Implementation should not block desirable future features:
 ## Alternatives
 
 1. **Group node**: Group nodes were the original solution to provide a subset of functionality. Attempting to re-engineer group nodes to provide the complete set of features is impractical.
-2. https://github.com/vivax3794/ComfyUI-Sub-Nodes: A third party extension with a decent feature coverage
+2. https://github.com/vivax3794/Hanzo Studio-Sub-Nodes: A third party extension with a decent feature coverage
    1. Limitations on workflow format
    2. Implements many features via custom nodes - the right approach for an extension, but cannot be easily converted to become new features in core libraries
 3. **Subgraph widget**: Representing a subgraph inside a node as a widget. Provides a small UX improvement over the status quo, but with a disproportionately high effort requirement.
@@ -320,7 +320,7 @@ Implementation should not block desirable future features:
 
 - [ ] TODO: Requires finalisation of unresolved questions.
 
-If we implement this proposal, how will existing ComfyUI users and developers adopt it? Fastly.
+If we implement this proposal, how will existing Hanzo Studio users and developers adopt it? Fastly.
 
 1. **Convert group nodes to subgraphs**: This is planned, but outside the scope of this RFC.
 2. **Extensions**: Consider old & new

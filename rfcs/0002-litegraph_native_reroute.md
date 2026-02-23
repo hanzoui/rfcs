@@ -2,16 +2,16 @@
 
 - Start Date: 2025-01-12
 - Target Major Version: Frontend 1.15
-- Implemented PR: https://github.com/Comfy-Org/ComfyUI_frontend/pull/3151
+- Implemented PR: https://github.com/hanzoui/studio_frontend/pull/3151
 - Reference Issues:
 
-  - <https://github.com/Comfy-Org/litegraph.js/pull/301>
-  - <https://github.com/Comfy-Org/ComfyUI_frontend/pull/1420>
-  - <https://github.com/Comfy-Org/ComfyUI_frontend/pull/1421>
+  - <https://github.com/hanzoui/litegraph.js/pull/301>
+  - <https://github.com/hanzoui/studio_frontend/pull/1420>
+  - <https://github.com/hanzoui/studio_frontend/pull/1421>
 
 ## Summary
 
-This RFC proposes replacing ComfyUI's current frontend-only reroute node implementation with a native LiteGraph reroute feature. The new implementation will treat reroutes as link metadata rather than full nodes, providing several benefits:
+This RFC proposes replacing Hanzo Studio's current frontend-only reroute node implementation with a native LiteGraph reroute feature. The new implementation will treat reroutes as link metadata rather than full nodes, providing several benefits:
 
 - Simpler workflow JSON representation
 - Proper type safety throughout connection chains
@@ -192,7 +192,7 @@ The current frontend-only reroute implementation has several limitations and dra
 
 2. **Type Safety Issues**: The current implementation uses wildcard type matching (`"*"`) for inputs, which bypasses LiteGraph's type checking system. This can lead to type inconsistency issues when connecting nodes, as the reroute node may connect incompatible types without proper validation.
 
-3. **Implementation Overhead**: The legacy reroute implementation has resulted in numerous special-case handling throughout the codebase. Many features require specific patches to handle reroute nodes differently (checking `if (node.name === 'Reroute')`) which increases maintenance burden and makes the codebase more fragile. See <https://cs.comfy.org/search?q=context:global+%22%27Reroute%27%22&patternType=keyword&sm=0> for a list of patches.
+3. **Implementation Overhead**: The legacy reroute implementation has resulted in numerous special-case handling throughout the codebase. Many features require specific patches to handle reroute nodes differently (checking `if (node.name === 'Reroute')`) which increases maintenance burden and makes the codebase more fragile. See <https://cs.hanzo.ai/search?q=context:global+%22%27Reroute%27%22&patternType=keyword&sm=0> for a list of patches.
 
 By implementing reroutes as a native LiteGraph feature, we can:
 

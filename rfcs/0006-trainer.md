@@ -1,12 +1,12 @@
 
-# RFC: ComfyUI Training Modules
+# RFC: Hanzo Studio Training Modules
 
 - Start Date: 2025-03-01
 - Target Major Version: TBD
 
 ## Summary
 
-This RFC proposes the addition of training capabilities to ComfyUI, enabling users to create and fine-tune LoRA (Low-Rank Adaptation) models directly through the ComfyUI interface. The proposal includes a set of node implementations for loading image datasets, training LoRAs, visualizing training progress, and saving trained models.
+This RFC proposes the addition of training capabilities to Hanzo Studio, enabling users to create and fine-tune LoRA (Low-Rank Adaptation) models directly through the Hanzo Studio interface. The proposal includes a set of node implementations for loading image datasets, training LoRAs, visualizing training progress, and saving trained models.
 
 ## Basic example
 
@@ -35,7 +35,7 @@ Currently, users who want to create custom LoRA models need to:
 2. Set up specialized environments for training
 3. Manually move the trained models between systems
 
-Adding training capabilities directly to ComfyUI would:
+Adding training capabilities directly to Hanzo Studio would:
 
 1. **Simplify the training workflow**: Users can train models in the same interface where they use them
 2. **Increase accessibility**: Users without programming experience can customize models
@@ -181,8 +181,8 @@ The implementation also includes several support classes:
 ## Drawbacks
 
 1. **Resource Consumption**: Training is computationally intensive and may strain systems with limited resources
-2. **UI Responsiveness**: Long training processes could make the ComfyUI interface less responsive
-3. **Complexity**: Adding training capabilities increases the complexity of the ComfyUI codebase
+2. **UI Responsiveness**: Long training processes could make the Hanzo Studio interface less responsive
+3. **Complexity**: Adding training capabilities increases the complexity of the Hanzo Studio codebase
 4. **Learning Curve**: Users may need to understand more ML concepts to effectively use the training features
 
 ## Adoption strategy
@@ -223,7 +223,7 @@ Initial implementation of the nodes described in this RFC.
 
 ### Phase 4: Model Format
 
-- New model format to improve model memory management and metadata of models in ComfyUI
+- New model format to improve model memory management and metadata of models in Hanzo Studio
 
 ## Links
 

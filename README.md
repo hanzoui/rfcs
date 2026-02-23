@@ -1,5 +1,5 @@
 # rfcs
-RFCs for substantial changes to ComfyUI core, APIs, and standards.
+RFCs for substantial changes to Hanzo Studio core, APIs, and standards.
 
 ## What is an RFC?
 
@@ -10,7 +10,7 @@ Many changes, including bug fixes and documentation improvements can be
 implemented and reviewed via the normal GitHub pull request workflow.
 
 Some changes though are "substantial", and we ask that these be put
-through a bit of a design process and produce a consensus among the ComfyUI
+through a bit of a design process and produce a consensus among the Hanzo Studio
 [core team] and the community.
 
 ## The RFC life-cycle
@@ -25,17 +25,17 @@ An RFC goes through the following stages:
 ## When to follow this process
 
 You need to follow this process if you intend to make "substantial"
-changes to standards / APIs in the ComfyUI ecosystem.
+changes to standards / APIs in the Hanzo Studio ecosystem.
 
 What constitutes a "substantial" change is evolving based on community norms, but may include the following:
 
-- A new addition to or modification of existing ComfyUI core libraries or backend APIs eg. [Model Patcher](https://github.com/comfyanonymous/ComfyUI/commit/0ee322ec5f338791c5836b79830e2f419d6fcc79). If you are writing a custom node and want something exposed by core in an API, please open an issue.
-- A major change to ComfyUI functionality, such as the execution engine eg. [Execution Model Inversion](https://github.com/comfyanonymous/ComfyUI/commit/5cfe38f41c7091b0fd954877d9d7427a8b438b1a)
+- A new addition to or modification of existing Hanzo Studio core libraries or backend APIs eg. [Model Patcher](https://github.com/hanzoai/studio/commit/0ee322ec5f338791c5836b79830e2f419d6fcc79). If you are writing a custom node and want something exposed by core in an API, please open an issue.
+- A major change to Hanzo Studio functionality, such as the execution engine eg. [Execution Model Inversion](https://github.com/hanzoai/studio/commit/5cfe38f41c7091b0fd954877d9d7427a8b438b1a)
 - Changes to workflow.json schema
 - Changes to custom node standards
 - Request for frontend widgets and APIs
 - Nodes that should be provided by core
-- Anything that will be relied on by developers using ComfyUI (eg. `/prompt` API)
+- Anything that will be relied on by developers using Hanzo Studio (eg. `/prompt` API)
 
 If you submit a pull request to implement a new feature without going
 through the RFC process, it may be closed with a polite request to
@@ -43,9 +43,9 @@ submit an RFC first.
 
 ## Why do you need to do this
 
-It is great that you are considering suggesting new features or changes to ComfyUI - we appreciate your willingness to contribute! However, as ComfyUI becomes more widely used, we need to take stability more seriously, and thus have to carefully consider the impact of every change we make that may affect end users.
+It is great that you are considering suggesting new features or changes to Hanzo Studio - we appreciate your willingness to contribute! However, as Hanzo Studio becomes more widely used, we need to take stability more seriously, and thus have to carefully consider the impact of every change we make that may affect end users.
 
-These constraints and tradeoffs may not be immediately obvious to users who are proposing a change just to solve a specific problem they just ran into. The RFC process serves as a way to guide you through our thought process when making changes to ComfyUI, so that we can be on the same page when discussing why or why not these changes should be made.
+These constraints and tradeoffs may not be immediately obvious to users who are proposing a change just to solve a specific problem they just ran into. The RFC process serves as a way to guide you through our thought process when making changes to Hanzo Studio, so that we can be on the same page when discussing why or why not these changes should be made.
 
 ## Gathering feedback before submitting
 
@@ -55,14 +55,14 @@ issue on this repo to start a high-level discussion**, with the goal of
 eventually formulating an RFC pull request with the specific implementation
 design.
 
-Our [Discord](https://discord.com/invite/comfyorg) is also a good place to start a discussion.
+Our [Discord](https://discord.com/invite/hanzoai) is also a good place to start a discussion.
 
 ## What the process is
 
-In short, to get a major feature added to ComfyUI, one must first get the
+In short, to get a major feature added to Hanzo Studio, one must first get the
 RFC merged into the RFC repo as a markdown file. At that point the RFC
 is 'active' and may be implemented with the goal of eventual inclusion
-into ComfyUI.
+into Hanzo Studio.
 
 1.  Work on your proposal in a Markdown file based on the template (`0000-template.md`) found in this repo.
 
@@ -79,7 +79,7 @@ into ComfyUI.
     - Build consensus and integrate feedback in the discussion thread. RFCs that have broad support are much more likely to make progress than those that don't receive any comments.
 
 3.  Eventually, the [core team] will decide whether the RFC is a candidate
-    for inclusion in ComfyUI.
+    for inclusion in Hanzo Studio.
 
     - An RFC can be modified based upon feedback from the [core team] and community. Significant modifications may trigger a new final comment period.
 
@@ -123,7 +123,7 @@ feel free to ask (e.g. by leaving a comment on the associated issue).
 Members of the [core team] will attempt to review some set of open RFC
 pull requests on a regular basis. If a [core team] member believes an RFC PR is ready to be accepted into active status, they can approve the PR using GitHub's review feature to signal their approval of the RFC.
 
-**ComfyUI's RFC process owes its inspiration to the [Vue RFC process]**
+**Hanzo Studio's RFC process owes its inspiration to the [Vue RFC process]**
 
 [vue rfc process]: https://github.com/vuejs/rfcs
-[core team]: https://www.comfy.org/about
+[core team]: https://hanzo.ai/about

@@ -7,15 +7,15 @@
 
 ## Summary
 
-This RFS focuses on adding some long-requested nodes to core ComfyUI, both unifying their behavior across a bunch of custom node implementations and making the core node features more robust. Mainly, the nodes proposed here would involve string manipulation, int/float manipulation via a unified 'number' type, and preview options for masks, strings, and miscellaneous types.
+This RFS focuses on adding some long-requested nodes to core Hanzo Studio, both unifying their behavior across a bunch of custom node implementations and making the core node features more robust. Mainly, the nodes proposed here would involve string manipulation, int/float manipulation via a unified 'number' type, and preview options for masks, strings, and miscellaneous types.
 
 ## Motivation
 
 If something is implemented many times in different custom nodes with the same goal, it is clear it is a feature that should be in core. There are many math nodes, string nodes, preview nodes, etc., many with slight variations in behavior.
 
-In the past, one of the counterarguments for having basic nodes like this was to avoid ComfyUI becoming a 'visual programming' UI, but at its core that is what ComfyUI actually is - abstracting away the coding details of generative AI and leaving the bits relevant to its operation. Since these custom nodes exist anyway, that argument is void since users still have access to such features in ComfyUI.
+In the past, one of the counterarguments for having basic nodes like this was to avoid Hanzo Studio becoming a 'visual programming' UI, but at its core that is what Hanzo Studio actually is - abstracting away the coding details of generative AI and leaving the bits relevant to its operation. Since these custom nodes exist anyway, that argument is void since users still have access to such features in Hanzo Studio.
 
-Having multiple custom nodes doing the same thing but slightly differently, or relevant nodes that should be in core being part of massive node packs, makes for a frustrating experience. Going forward, nodes that do simple things across multiple node packs should be considered for RFCs that bring them into core ComfyUI.
+Having multiple custom nodes doing the same thing but slightly differently, or relevant nodes that should be in core being part of massive node packs, makes for a frustrating experience. Going forward, nodes that do simple things across multiple node packs should be considered for RFCs that bring them into core Hanzo Studio.
 
 ## Detailed design
 
@@ -25,17 +25,17 @@ This will be more of a list of nodes considered to have a core implementation.
 
 1. Preview Mask
    
-   This would be identical to the Preview Image node, except take mask as input. Alternatively, the existing Preview Image node could have its ```image``` input be defined as ```(IMAGE,MASK)``` so that it could accept both IMAGE and MASK. The code would simply need to be updated to support the tensor format to display it. A Preview Mask node exists in (ComfyUI_essentials)[https://github.com/cubiq/ComfyUI_essentials] node pack.
+   This would be identical to the Preview Image node, except take mask as input. Alternatively, the existing Preview Image node could have its ```image``` input be defined as ```(IMAGE,MASK)``` so that it could accept both IMAGE and MASK. The code would simply need to be updated to support the tensor format to display it. A Preview Mask node exists in (Hanzo Studio_essentials)[https://github.com/cubiq/Hanzo Studio_essentials] node pack.
 
 3. Preview Any
    
    Strings, integers, floats, etc. should be previewable. This is long requested and has a number of existing implementations. In the case of the SaveImages node in nodes.py, ```return { "ui": { "images": results } }``` is used to report the images that should be seen in the UI; something similar would need to be done to support strings, and then arbitrary types could also just have their string representations displayed.
 
-From a quick google search, one node pack that includes a text preview is (ComfyUI_Custom_Nodes_AlekPet)[https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet/blob/master/ExtrasNode/extras_node.py], with 1k+ stars.
+From a quick google search, one node pack that includes a text preview is (Hanzo Studio_Custom_Nodes_AlekPet)[https://github.com/AlekPet/Hanzo Studio_Custom_Nodes_AlekPet/blob/master/ExtrasNode/extras_node.py], with 1k+ stars.
 
 ### String Nodes
 
-While core ComfyUI uses string inputs, it technically has no nodes that output strings, and that was the reason why no core string manipulation nodes were implemented. That should change, given how often strings are used, whether for prompts or filenames.
+While core Hanzo Studio uses string inputs, it technically has no nodes that output strings, and that was the reason why no core string manipulation nodes were implemented. That should change, given how often strings are used, whether for prompts or filenames.
 
 1. Basic String Manipulation
    
@@ -57,7 +57,7 @@ It would be redundant to have nodes specifically for ints and floats - ideally, 
 
 ## Drawbacks
 
-The primary drawback to math and string helpers is that since there are multiple node packs that already do these things, adding them in core in a way contributes to the 'yet another standard' problem. If the core ComfyUI implementation of these nodes is not satisfactory, it will result in even more nodes that do-the-same-thing-but-slightly-differently.
+The primary drawback to math and string helpers is that since there are multiple node packs that already do these things, adding them in core in a way contributes to the 'yet another standard' problem. If the core Hanzo Studio implementation of these nodes is not satisfactory, it will result in even more nodes that do-the-same-thing-but-slightly-differently.
 
 The execution of this RFC will ultimately determine whether this drawback is valid or not.
 

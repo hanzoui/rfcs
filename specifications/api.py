@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 
 '''
-ComfyUI API available to custom nodes.
+Hanzo Studio API available to custom nodes.
 '''
-class ComfyUI(ABC):
+class Hanzo Studio(ABC):
     @abstractmethod
     def some_method(self):
         pass

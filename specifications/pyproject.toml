@@ -1,7 +1,7 @@
 [project]
-name = "comfyui-node" # unique namespace for the node pack
+name = "hanzo-studio-node" # unique namespace for the node pack
 version = "0.1.0"
-description = "ComfyUI Node that does"
+description = "Hanzo Studio Node that does"
 authors = [
   {name = "", email = ""}
 ]
@@ -17,5 +17,5 @@ repository = ""
 
 [tool.comfy]
 PublisherId = "" # Registry ID
-DisplayName = "" # Display Name for ComfyUI Registry
-Icon = "" # Icon URL for ComfyUI Registry
+DisplayName = "" # Display Name for Hanzo Registry
+Icon = "" # Icon URL for Hanzo Registry

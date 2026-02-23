@@ -5,7 +5,7 @@
 
 ## Summary
 
-This RFC proposes a new format for handling widget values in ComfyUI workflows by integrating them directly into the node inputs array instead of storing them in a separate `widgets_values` array. The new format improves type safety, maintainability, and self-documentation of workflows by making each widget value a named, typed input with explicit metadata. This change will require a version bump in the workflow schema from 1.0 to 2.0, but includes backward compatibility measures to ensure a smooth transition for existing workflows and custom nodes.
+This RFC proposes a new format for handling widget values in Hanzo Studio workflows by integrating them directly into the node inputs array instead of storing them in a separate `widgets_values` array. The new format improves type safety, maintainability, and self-documentation of workflows by making each widget value a named, typed input with explicit metadata. This change will require a version bump in the workflow schema from 1.0 to 2.0, but includes backward compatibility measures to ensure a smooth transition for existing workflows and custom nodes.
 
 ## Basic example
 
@@ -263,7 +263,7 @@ The transition to the new widget values format will be implemented through a pha
 
 1. **Version Support**
 
-  - ComfyUI will support both 1.0 and 2.0 formats simultaneously during the transition period
+  - Hanzo Studio will support both 1.0 and 2.0 formats simultaneously during the transition period
   - The internal format will be 2.0, with automatic conversion happening at workflow load/save
   - All new features will target the 2.0 format
 
@@ -275,7 +275,7 @@ The transition to the new widget values format will be implemented through a pha
 
 3. **Migration Path**
 
-  - For ComfyUI Users:
+  - For Hanzo Studio Users:
 
     - Existing workflows will be automatically converted when loaded
     - No manual intervention required
@@ -291,7 +291,7 @@ The transition to the new widget values format will be implemented through a pha
 4. **Ecosystem Impact**
 
   - Code search shows only ~10 custom node repositories directly accessing `widget_values`
-  - ComfyUI team can directly contribute fixes to these repositories
+  - Hanzo Studio team can directly contribute fixes to these repositories
   - API clients and workflow manipulation tools will need modification
   - Web UI extensions may require updates for the new format
   - Compatibility layer will be provided during transition:
