@@ -310,7 +310,7 @@ Implementation should not block desirable future features:
 ## Alternatives
 
 1. **Group node**: Group nodes were the original solution to provide a subset of functionality. Attempting to re-engineer group nodes to provide the complete set of features is impractical.
-2. https://github.com/vivax3794/Hanzo Studio-Sub-Nodes: A third party extension with a decent feature coverage
+2. https://github.com/vivax3794/HanzoStudio-Sub-Nodes: A third party extension with a decent feature coverage
    1. Limitations on workflow format
    2. Implements many features via custom nodes - the right approach for an extension, but cannot be easily converted to become new features in core libraries
 3. **Subgraph widget**: Representing a subgraph inside a node as a widget. Provides a small UX improvement over the status quo, but with a disproportionately high effort requirement.
