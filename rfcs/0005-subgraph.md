@@ -3,7 +3,7 @@
 - Start Date: 2025-01-12
 - Target Major Version: Frontend 1.22
 - Reference Issues:
-  - https://github.com/hanzoui/studio_frontend/issues/1077
+  - https://github.com/hanzoui/frontend/issues/1077
   - https://github.com/hanzoai/studio/issues/5353
   - https://github.com/hanzoai/studio/issues/4094
   - [... many more]

@@ -4,12 +4,12 @@
 - Target Major Version: Frontend v1.16
 - Implementation PRs:
   
-  - https://github.com/hanzoui/studio_frontend/pull/3326
+  - https://github.com/hanzoui/frontend/pull/3326
   - https://github.com/hanzoui/litegraph.js/pull/891
 
 - Reference Issues:
 
-  - <https://github.com/hanzoui/studio_frontend/pull/1021>
+  - <https://github.com/hanzoui/frontend/pull/1021>
 
 ## Summary
 
@@ -45,7 +45,7 @@ There are two ways to convert a socket to a widget:
 
 ![conversion_context_menu](https://github.com/user-attachments/assets/4e47f740-d607-44da-b49c-4a9bea548656)
 
-2\. **Option2**: Drag a link of correct type from an output socket on another node to the widget (Implemented in <https://github.com/hanzoui/studio_frontend/pull/1021>).
+2\. **Option2**: Drag a link of correct type from an output socket on another node to the widget (Implemented in <https://github.com/hanzoui/frontend/pull/1021>).
 
 https://github.com/user-attachments/assets/360013b2-d350-4fb0-bbce-cb860178d9ed
 

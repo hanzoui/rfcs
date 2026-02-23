@@ -2,12 +2,12 @@
 
 - Start Date: 2025-01-12
 - Target Major Version: Frontend 1.15
-- Implemented PR: https://github.com/hanzoui/studio_frontend/pull/3151
+- Implemented PR: https://github.com/hanzoui/frontend/pull/3151
 - Reference Issues:
 
   - <https://github.com/hanzoui/litegraph.js/pull/301>
-  - <https://github.com/hanzoui/studio_frontend/pull/1420>
-  - <https://github.com/hanzoui/studio_frontend/pull/1421>
+  - <https://github.com/hanzoui/frontend/pull/1420>
+  - <https://github.com/hanzoui/frontend/pull/1421>
 
 ## Summary
 
