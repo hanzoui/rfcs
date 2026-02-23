@@ -25,13 +25,13 @@ This will be more of a list of nodes considered to have a core implementation.
 
 1. Preview Mask
    
-   This would be identical to the Preview Image node, except take mask as input. Alternatively, the existing Preview Image node could have its ```image``` input be defined as ```(IMAGE,MASK)``` so that it could accept both IMAGE and MASK. The code would simply need to be updated to support the tensor format to display it. A Preview Mask node exists in (Hanzo Studio_essentials)[https://github.com/cubiq/Hanzo Studio_essentials] node pack.
+   This would be identical to the Preview Image node, except take mask as input. Alternatively, the existing Preview Image node could have its ```image``` input be defined as ```(IMAGE,MASK)``` so that it could accept both IMAGE and MASK. The code would simply need to be updated to support the tensor format to display it. A Preview Mask node exists in (HanzoStudio_essentials)[https://github.com/cubiq/HanzoStudio_essentials] node pack.
 
 3. Preview Any
    
    Strings, integers, floats, etc. should be previewable. This is long requested and has a number of existing implementations. In the case of the SaveImages node in nodes.py, ```return { "ui": { "images": results } }``` is used to report the images that should be seen in the UI; something similar would need to be done to support strings, and then arbitrary types could also just have their string representations displayed.
 
-From a quick google search, one node pack that includes a text preview is (Hanzo Studio_Custom_Nodes_AlekPet)[https://github.com/AlekPet/Hanzo Studio_Custom_Nodes_AlekPet/blob/master/ExtrasNode/extras_node.py], with 1k+ stars.
+From a quick google search, one node pack that includes a text preview is (HanzoStudio_Custom_Nodes_AlekPet)[https://github.com/AlekPet/HanzoStudio_Custom_Nodes_AlekPet/blob/master/ExtrasNode/extras_node.py], with 1k+ stars.
 
 ### String Nodes
 
